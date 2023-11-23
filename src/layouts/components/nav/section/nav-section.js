@@ -1,4 +1,5 @@
 import NavList from "./nav-list";
+import PropTypes from "prop-types";
 
 export default function NavSection({ data }) {
   return (
@@ -12,7 +13,6 @@ export default function NavSection({ data }) {
   );
 }
 
-
 export function Group({ items }) {
   const renderContent = items.map((list, index) => (
     <NavList key={index} data={list} />
@@ -20,3 +20,7 @@ export function Group({ items }) {
 
   return renderContent;
 }
+
+NavSection.propTypes = {
+  data: PropTypes.array,
+};

@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
 import DashboardLayout from "../../layouts/dashboard/layout";
+import DashboardPage from "../../pages/dashboard";
 
 export const dashboardRoutes = [
   {
@@ -12,7 +13,7 @@ export const dashboardRoutes = [
     children: [
       {
         index: true,
-        element: <h1>dashboard</h1>,
+        element: <DashboardPage />,
       },
 
       {

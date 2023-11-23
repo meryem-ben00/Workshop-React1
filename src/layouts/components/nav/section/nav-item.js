@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 export default function NavItem({ item, active }) {
   const { title, path } = item;
@@ -19,3 +20,8 @@ export default function NavItem({ item, active }) {
     </>
   );
 }
+
+NavItem.propTypes = {
+  item: PropTypes.object,
+  active: PropTypes.bool,
+};
