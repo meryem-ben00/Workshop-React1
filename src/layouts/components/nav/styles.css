@@ -1,0 +1,32 @@
+.navbar {
+  background: var(--green-color);
+}
+
+.active {
+  background: var(--bg-color);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  position: relative;
+}
+
+.active::before,
+.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+}
+
+.active::before {
+  left: -20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 5px 5px 0 5px #1e2e5c;
+}
+
+.active::after {
+  right: -20px;
+  border-bottom-left-radius: 20px;
+  box-shadow: -5px 5px 0 5px #1e2e5c;
+}
