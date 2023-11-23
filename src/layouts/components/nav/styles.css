@@ -1,11 +1,12 @@
 .navbar {
   background: var(--green-color);
+  padding-top: 10px;
 }
 
 .active {
   background: var(--bg-color);
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
   position: relative;
 }
 
@@ -29,4 +30,8 @@
   right: -20px;
   border-bottom-left-radius: 20px;
   box-shadow: -5px 5px 0 5px #1e2e5c;
+}
+
+.navItem{
+  height: 50px;
 }

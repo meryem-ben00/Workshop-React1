@@ -9,8 +9,8 @@ export default function NavItem({ item, active }) {
         to={path}
         className={
           active
-            ? "active text-white rounded-md px-3 py-2 text-sm font-medium d-flex justify-center align-middle h-18"
-            : " text-white rounded-md px-3 py-2 text-sm font-medium d-flex justify-center align-middle h-18"
+            ? "active text-white  px-3 py-2 text-sm font-medium flex justify-center items-center navItem"
+            : " text-white px-3 py-2 text-sm font-medium flex justify-center items-center navItem"
         }
         aria-current="page"
       >
