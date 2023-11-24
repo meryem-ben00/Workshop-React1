@@ -1,4 +1,5 @@
 const ROOTS = {
+  AUTH: "/auth",
   DASHOARD: "/dashboard",
 };
 
@@ -8,5 +9,9 @@ export const paths = {
     users: `${ROOTS.DASHOARD}/users`,
 
     test: `${ROOTS.DASHOARD}/test`,
+  },
+
+  auth: {
+    login: `${ROOTS.AUTH}/login`,
   },
 };
