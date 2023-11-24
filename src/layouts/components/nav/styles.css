@@ -3,12 +3,16 @@
   padding-top: 10px;
 }
 
+
 .active {
   background: var(--bg-color);
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
   position: relative;
 }
+
+/* 
+  Change here, Make the classes more scoped first.
 
 .active::before,
 .active::after {
@@ -31,6 +35,8 @@
   border-bottom-left-radius: 20px;
   box-shadow: -5px 5px 0 5px #1e2e5c;
 }
+
+ */
 
 .navItem{
   height: 50px;

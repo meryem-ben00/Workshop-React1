@@ -1,6 +1,9 @@
 import { Outlet } from "react-router-dom";
 import DashboardLayout from "../../layouts/dashboard/layout";
 import DashboardPage from "../../pages/dashboard";
+import AdministrationsPage from "../../pages/users/administration-users/administrations-page";
+import DoctorsPage from "../../pages/users/doctors-users/doctors-page";
+import UsersPage from "../../pages/users/users-page";
 
 export const dashboardRoutes = [
   {
@@ -18,8 +21,19 @@ export const dashboardRoutes = [
 
       {
         path: "users",
-        element: <h1>Users</h1>,
+        element: <UsersPage />,
+        children: [
+          {
+            path: "doctors",
+            element: <DoctorsPage />
+          },
+          {
+            path: "administrations",
+            element: <AdministrationsPage />
+          }
+        ]
       },
+
       {
         path: "test",
         element: <h1>Test page</h1>,
