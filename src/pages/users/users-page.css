@@ -1,0 +1,42 @@
+.usersPage{
+  padding: 65px 100px 75px;
+}
+
+.userTypesContainer{
+  left: 250px;
+}
+
+.userTypesContainer::before{
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  left: -50px;
+  top: 0px;
+  box-shadow: 0px -20px 0px 0 white;
+  z-index: -1;
+  border-top-right-radius: 50px 15px;
+}
+
+.userTypesContainer::after{
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  right: -50px;
+  top: 0px;
+  box-shadow: 0px -20px 0px 0 white;
+  z-index: -1;
+  border-top-left-radius: 50px 15px;
+}
+
+.userTypesContainer .userType{
+  background-color: transparent;
+  transition: 1s;
+}
+
+.userTypesContainer .userType.active{
+  background-color: #a8cbb1;
+}

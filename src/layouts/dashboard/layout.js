@@ -1,12 +1,13 @@
-import NavDashboard from "../components/nav/nav";
 import PropTypes from "prop-types";
+import NavDashboard from "../components/nav/nav";
 
 export default function DashboardLayout({ children }) {
   return (
     <>
       <NavDashboard />
 
-      <div className="mx-auto max-w-7xl px-2 mt-6">{children}</div>
+      {/* Change Here remove mt-6 */}
+      <div className="mx-auto max-w-7xl px-2">{children}</div>
     </>
   );
 }
