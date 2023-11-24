@@ -40,3 +40,10 @@
 .userTypesContainer .userType.active{
   background-color: #a8cbb1;
 }
+
+/* Styling for the children component: */
+.addButton{
+  background-color: var(--green-color);
+  padding: 10px 20px;
+  border-radius: 6px;
+}
