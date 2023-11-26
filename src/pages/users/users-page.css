@@ -47,3 +47,24 @@
   padding: 10px 20px;
   border-radius: 6px;
 }
+
+.usersTable tr:first-child th:first-child{
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+.usersTable tr:first-child th:last-child{
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.usersTable .usersTableHeader,
+.usersTable tbody tr .userType,
+.usersTable tbody tr .timeAdded{
+  color: #b5b5c3;
+}
+
+.usersTable tbody tr .userType,
+.usersTable tbody tr .timeAdded{
+  font-size: 13px;
+  font-weight: 500;
+}
