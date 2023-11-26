@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import DashboardView from "../../sections/dashboard/views/dashboard-view";
 
 export default function DashboardPage() {
   return (
@@ -7,7 +8,7 @@ export default function DashboardPage() {
         <title>Dashboard</title>
       </Helmet>
 
-      <h1 className="text-white">Dashboard Page</h1>
+      <DashboardView />
     </>
   );
 }
