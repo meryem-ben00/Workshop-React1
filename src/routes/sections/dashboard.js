@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import DashboardLayout from "../../layouts/dashboard/layout";
 import DashboardPage from "../../pages/dashboard";
+import DoctorProfile from "../../pages/users/DoctorProfile";
 
 export const dashboardRoutes = [
   {
@@ -18,7 +19,7 @@ export const dashboardRoutes = [
 
       {
         path: "users",
-        element: <h1>Users</h1>,
+        element: <DoctorProfile/>,
       },
       {
         path: "test",

@@ -6,7 +6,7 @@ export default function DashboardLayout({ children }) {
     <>
       <NavDashboard />
 
-      <div className="mx-auto max-w-7xl px-2 mt-6">{children}</div>
+      <div className="">{children}</div>
     </>
   );
 }
