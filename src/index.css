@@ -25,3 +25,25 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+.css-1aj9me-MuiPickersLayout-root .MuiPickersLayout-toolbar,
+.css-1aj9me-MuiPickersLayout-root .MuiPickersLayout-actionBar{
+  display: none;
+}
+.css-1q04gal-MuiDateCalendar-root{
+  width: 100% !important;
+  
+}
+.MuiPickersDay-root ,.MuiDayCalendar-weekDayLabel{
+  font-size: 14px !important;
+  width:11% !important;
+  height: 29px !important;
+}
+.css-jgls56-MuiButtonBase-root-MuiPickersDay-root:not(.Mui-selected),
+.css-1u23akw-MuiButtonBase-root-MuiPickersDay-root.Mui-selected{
+  width:31px !important;
+  margin-left: calc((11% - 31px)/2);
+
+  margin-right: calc((11% - 31px)/2);
+  
+  height:31px !important;
+}

@@ -19,7 +19,13 @@ export const dashboardRoutes = [
 
       {
         path: "users",
-        element: <DoctorProfile/>,
+        element: "",
+        children: [
+          {
+            path: "Profile",
+            element: <DoctorProfile/>
+          }
+        ]
       },
       {
         path: "test",
