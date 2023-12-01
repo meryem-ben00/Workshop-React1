@@ -5,6 +5,7 @@ const ROOTS = {
 export const paths = {
   dashboard: {
     root: ROOTS.DASHOARD,
+
     users: `${ROOTS.DASHOARD}/users`,
 
     test: `${ROOTS.DASHOARD}/test`,

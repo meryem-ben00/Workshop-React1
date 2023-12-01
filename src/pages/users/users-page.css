@@ -1,5 +1,5 @@
 .usersPage{
-  padding: 65px 100px 75px;
+  padding-bottom: 75px;
 }
 
 .userTypesContainer{
@@ -37,7 +37,7 @@
   transition: 1s;
 }
 
-.userTypesContainer .userType.active{
+.userTypesContainer .userType.activeLink{
   background-color: #a8cbb1;
 }
 
@@ -46,6 +46,10 @@
   background-color: var(--green-color);
   padding: 10px 20px;
   border-radius: 6px;
+}
+
+.usersTable{
+  width: 100%;
 }
 
 .usersTable tr:first-child th:first-child{
@@ -75,7 +79,6 @@
   height: 35px;
   padding: 10px;
   border-radius: 6px;
-  /* font-weight: bold; */
   display: flex;
   justify-content: center;
   align-items: center;

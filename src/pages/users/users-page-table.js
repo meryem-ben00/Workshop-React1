@@ -1,10 +1,10 @@
 import { flexRender } from "@tanstack/react-table";
 
-export default function DoctorsTable(props){
-  const table = props.table;
+export default function UsersPageTable( { table } ){
+  // const table = props.table;
 
   return (
-    <div className="doctorsTableCom">
+    <div className="usersTableCom text-white mb-7 overflow-x-auto">
 
       <table className="usersTable">
         <thead className="usersTableHeader bg-white rounded-md">
@@ -12,14 +12,21 @@ export default function DoctorsTable(props){
             headerGroup => (
               <tr key={headerGroup.id}>
                 {headerGroup.headers.map(
-                  header => <th key={header.id} className="text-left font-semibold text-xs py-2 px-4">
-                    {flexRender(header.column.columnDef.header, header.getContext())}
+                  header => <th 
+                    key={header.id} 
+                    className="text-left font-semibold text-xs px-4"
+                  >
+                    <div className="overflow-hidden h-10 leading-10">
+                      {flexRender(header.column.columnDef.header, header.getContext())}
+                    </div>
+                    
                   </th>
                 )}
               </tr>
             )
           )}
         </thead>
+  
         <tbody>
           {table.getRowModel().rows.map(
             row => (
@@ -36,7 +43,7 @@ export default function DoctorsTable(props){
                       ) +
                       (
                         cell.column.columnDef.Headers === " "? 
-                          "text-right pr-0" 
+                          "text-right ps-0 pe-0" 
                         : 
                           ""
                       ) 
