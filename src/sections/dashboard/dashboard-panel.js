@@ -3,7 +3,7 @@ export default function DashboardPanel() {
     <>
       <div className="grid grid-cols-4 gap-12">
         <div className="bg-white rounded-md p-4">
-          <h6 className="text-sm">New Patients</h6>
+          <h6 className="text-sm font-bold">New Patients</h6>
           <div className="flex items-center justify-between my-3">
             <span className="text-green-600 font-bold">125</span>
             <img src="/assets/icons/chart-1.png" alt="" />
@@ -14,7 +14,7 @@ export default function DashboardPanel() {
         </div>
 
         <div className="bg-white rounded-md p-4">
-          <h6 className="text-sm">Old Patients</h6>
+          <h6 className="text-sm font-bold">Old Patients</h6>
           <div className="flex items-center justify-between my-3">
             <span className="text-green-600 font-bold">218</span>
             <img src="/assets/icons/chart-3.png" alt="" />
@@ -25,7 +25,7 @@ export default function DashboardPanel() {
         </div>
 
         <div className="bg-white rounded-md p-4">
-          <h6 className="text-sm">Today's Visitor</h6>
+          <h6 className="text-sm font-bold">Today's Visitor</h6>
           <div className="flex items-center justify-between my-3">
             <span className="text-green-600 font-bold">25</span>
             <img src="/assets/icons/chart-2.png" alt="" />
@@ -36,7 +36,7 @@ export default function DashboardPanel() {
         </div>
 
         <div className="bg-white rounded-md p-4">
-          <h6 className="text-sm">Visitors</h6>
+          <h6 className="text-sm font-bold">Visitors</h6>
           <div className="flex items-center justify-between my-3">
             <span className="text-green-600 font-bold">2479</span>
             <img src="/assets/icons/chart-4.png" alt="" />

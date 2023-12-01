@@ -1,7 +1,9 @@
 import { useMemo } from "react";
 import ReactApexChart from "react-apexcharts";
+import { MONTHS } from "../../utils/constants";
 
-export default function ChartSpline() {
+export default function PatientChart() {
+  
   const data = useMemo(
     () => ({
       series: [
@@ -19,8 +21,6 @@ export default function ChartSpline() {
 
       options: {
         chart: {
-          height: 350,
-          type: "area",
           toolbar: {
             show: false,
           },
@@ -39,7 +39,7 @@ export default function ChartSpline() {
         },
 
         xaxis: {
-          categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"], // Replace with months
+          categories: MONTHS,
         },
       },
     }),
@@ -47,7 +47,7 @@ export default function ChartSpline() {
   );
 
   return (
-    <div className="bg-white rounded-md p-6 ">
+    <div className="bg-white rounded-md p-6 h-96">
       {/* Chart Header */}
       <div className="flex items-center justify-between">
         <h6 className="font-bold">New Patients</h6>
@@ -93,8 +93,8 @@ export default function ChartSpline() {
       <ReactApexChart
         options={data.options}
         series={data.series}
-        height={"100%"}
         type="area"
+        height="280"
       />
     </div>
   );
