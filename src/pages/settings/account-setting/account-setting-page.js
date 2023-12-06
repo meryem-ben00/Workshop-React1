@@ -29,7 +29,7 @@ export default function AccountSettingPage(){
   const onSubmit = (data) => {
     console.log('data', data);
     data.image = inputImageFileList;
-    // TODO: Save info.
+    // TODO: Save info in DB.
     navigate("/dashboard"); 
   }
 

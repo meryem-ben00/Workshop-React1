@@ -29,4 +29,4 @@ export default function SettingsPageLinks(){
   )
 }
 
-// TODO: Handle the long to Here and in the user-page
+// TODO: Handle the long URL Here and in the user-page
