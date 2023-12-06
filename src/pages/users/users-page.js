@@ -114,13 +114,13 @@ export default function UsersPage() {
     <div className="usersPage relative px-0 md:px-1 xl:px-5 2xl:px-24 pt-16">
 
       <div className='userTypesContainer absolute top-0 bg-white py-3
-        px-7 flex justify-center items-center gap-3 rounded-b-xl'
+        px-1 sm:px-7 flex justify-center items-center gap-3 rounded-b-xl'
       >
 
         <NavLink 
           to="/dashboard/users/doctors" 
           className={
-            "userType block py-2 px-7 rounded font-bold " +
+            "userType block py-2 px-5 sm:px-7 rounded font-bold " +
             ((type === 'doctors') ? "activeLink" : "")
           }
         > Doctor </NavLink>
@@ -128,7 +128,7 @@ export default function UsersPage() {
         <NavLink
           to="/dashboard/users/administrations" 
           className={
-            'userType block py-2 px-7 rounded font-bold ' +
+            'userType block py-2 px-5 sm:px-7 rounded font-bold ' +
             ((type === 'administrations') ? 'activeLink' : '')
           }
         > Administration </NavLink>
@@ -151,4 +151,4 @@ export default function UsersPage() {
 
 
 // TODO: Resize the table cells number.
-// TODO: Mae the table take all the screen width.
+// TODO: Center the top absolute div.
