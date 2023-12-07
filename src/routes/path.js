@@ -8,6 +8,7 @@ export const paths = {
     root: ROOTS.DASHOARD,
 
     users: `${ROOTS.DASHOARD}/users`,
+    chat: `${ROOTS.DASHOARD}/chat`,
 
     test: `${ROOTS.DASHOARD}/test`,
   },

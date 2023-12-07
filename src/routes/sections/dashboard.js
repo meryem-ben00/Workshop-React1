@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import DashboardLayout from "../../layouts/dashboard/layout";
 import DashboardPage from "../../pages/dashboard";
 import UsersPage from "../../pages/users/users-page";
+import ChatPage from "../../pages/chat";
 
 export const dashboardRoutes = [
   {
@@ -22,7 +23,10 @@ export const dashboardRoutes = [
         element: <UsersPage />,
       },
 
-
+      {
+        path: "chat",
+        element: <ChatPage />,
+      },
     ],
   },
 ];
