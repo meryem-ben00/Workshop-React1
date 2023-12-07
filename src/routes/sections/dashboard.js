@@ -1,7 +1,9 @@
 import { Outlet } from "react-router-dom";
 import DashboardLayout from "../../layouts/dashboard/layout";
 import DashboardPage from "../../pages/dashboard";
-import DoctorProfile from "../../pages/users/DoctorProfile";
+import Patients from "../../pages/Patients/Patients"
+import RegisterPatients from "../../pages/Patients/RegisterPatients"
+import DoctorProfile from "../../pages/users/DoctorProfile"
 
 export const dashboardRoutes = [
   {
@@ -18,19 +20,32 @@ export const dashboardRoutes = [
       },
 
       {
-        path: "users",
-        element: "",
+        path: "users/",
+        
         children: [
           {
             path: "Profile",
-            element: <DoctorProfile/>
-          }
-        ]
+            element: <DoctorProfile/>,
+          }]
+      },
+    ],
+  },
+  {
+    path: "Patients",
+    element: (
+      <DashboardLayout>
+        <Outlet />
+      </DashboardLayout>
+    ),
+    children: [
+      {
+        index: true,
+        element: <Patients/>,
       },
       {
-        path: "test",
-        element: <h1>Test page</h1>,
-      },
+        path: "Register",
+        element:<RegisterPatients/>,
+      }
     ],
   },
 ];
