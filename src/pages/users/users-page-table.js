@@ -34,7 +34,7 @@ export default function UsersPageTable( { table } ){
                 {row.getVisibleCells().map(
                   cell => (
                     <td key={cell.id} className={
-                      "text-sm text-left py-2 font-semibold " +
+                      "text-sm text-left py-2 font-semibold min-w-max " +
                       (
                         cell.column.columnDef.Headers === "Name" ?
                           "firstColumn flex items-center gap-3" 

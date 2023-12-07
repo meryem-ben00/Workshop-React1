@@ -5,6 +5,22 @@
 .userTypesContainer{
   left: 250px;
 }
+@media (max-width: 767px) {
+  .userTypesContainer{
+    left: calc(50% - 176px) ;
+  }
+}
+@media (max-width: 639px) {
+  .userTypesContainer{
+    left: calc(50% - 135px) ;
+  }
+  .userTypesContainer::before{
+    display: none;
+  }
+  .userTypesContainer::after{
+    display: none;
+  }
+}
 
 .userTypesContainer::before{
   content: "";
