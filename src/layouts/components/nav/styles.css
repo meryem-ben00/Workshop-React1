@@ -10,7 +10,7 @@
   position: relative;
 }
 
-/* Change here, Make the classes more scoped first. */
+/* TODO IMPORTANT: Change here, Make the classes more scoped first. 
 
 .navbar .active::before,
 .navbar .active::after {
@@ -33,6 +33,7 @@
   border-bottom-left-radius: 20px;
   box-shadow: -5px 5px 0 5px #1e2e5c;
 }
+*/
 
 .navItem {
   height: 50px;

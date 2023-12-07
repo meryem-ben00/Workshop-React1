@@ -1,3 +1,5 @@
+import { NavLink } from 'react-router-dom';
+
 export default function AvatarProfile() {
   return (
     <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
@@ -18,8 +20,10 @@ export default function AvatarProfile() {
 
       <div className="flex items-center justify-between">
         <div className="text-white">
-          <h6 className="text-sm"> Abdellah Saber</h6>
-          <span className="text-xs text-right block">Admin</span>
+          <NavLink to="settings/account-setting">
+            <h6 className="text-sm"> Abdellah Saber</h6>
+            <span className="text-xs text-right block">Admin</span>
+          </NavLink>
         </div>
 
         <img
