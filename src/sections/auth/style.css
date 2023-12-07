@@ -1,0 +1,37 @@
+.login-form {
+  width: 40%;
+}
+
+.form-h {
+  height: 100vh;
+}
+
+.login-span::before {
+  content: "";
+  position: absolute;
+  background: rgb(211, 206, 206);
+  width: 20px;
+  height: 2px;
+  top: 50%;
+  left: -25px;
+}
+
+.login-span::after {
+  content: "";
+  position: absolute;
+  background: rgb(211, 206, 206);
+  width: 20px;
+  height: 2px;
+  top: 50%;
+  right: -25px;
+}
+
+.submit-btn {
+  width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .login-form {
+    width: 90%;
+  }
+}

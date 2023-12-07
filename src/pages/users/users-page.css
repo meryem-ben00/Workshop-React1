@@ -1,0 +1,101 @@
+.usersPage{
+  padding-bottom: 75px;
+}
+
+.userTypesContainer{
+  left: 250px;
+}
+@media (max-width: 767px) {
+  .userTypesContainer{
+    left: calc(50% - 176px) ;
+  }
+}
+@media (max-width: 639px) {
+  .userTypesContainer{
+    left: calc(50% - 135px) ;
+  }
+  .userTypesContainer::before{
+    display: none;
+  }
+  .userTypesContainer::after{
+    display: none;
+  }
+}
+
+.userTypesContainer::before{
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  left: -50px;
+  top: 0px;
+  box-shadow: 0px -20px 0px 0 white;
+  z-index: -1;
+  border-top-right-radius: 50px 15px;
+}
+
+.userTypesContainer::after{
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  right: -50px;
+  top: 0px;
+  box-shadow: 0px -20px 0px 0 white;
+  z-index: -1;
+  border-top-left-radius: 50px 15px;
+}
+
+.userTypesContainer .userType{
+  background-color: transparent;
+  transition: 1s;
+}
+
+.userTypesContainer .userType.activeLink{
+  background-color: #a8cbb1;
+}
+
+/* Styling for the children component: */
+.addButton{
+  background-color: var(--green-color);
+  padding: 10px 20px;
+  border-radius: 6px;
+}
+
+.usersTable{
+  width: 100%;
+}
+
+.usersTable tr:first-child th:first-child{
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+.usersTable tr:first-child th:last-child{
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.usersTable .usersTableHeader,
+.usersTable tbody tr .userType,
+.usersTable tbody tr .timeAdded{
+  color: #b5b5c3;
+}
+
+.usersTable tbody tr .userType,
+.usersTable tbody tr .timeAdded{
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.paginationButton{
+  background-color: white;
+  width: 35px;
+  height: 35px;
+  padding: 10px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

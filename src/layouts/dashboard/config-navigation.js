@@ -12,9 +12,9 @@ export const useNavData = () => {
 
         {
           title: "Users",
-          path: paths.dashboard.users,
+          path: `${paths.dashboard.users}/doctors`,
         },
-        
+
         {
           title: "Test",
           path: paths.dashboard.test,

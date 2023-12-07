@@ -1,3 +1,14 @@
+import { Helmet } from "react-helmet-async";
+import DashboardView from "../../sections/dashboard/views/dashboard-view";
+
 export default function DashboardPage() {
-  return <h1 className="text-white">Dashboard Page</h1>;
+  return (
+    <>
+      <Helmet>
+        <title>Dashboard</title>
+      </Helmet>
+
+      <DashboardView />
+    </>
+  );
 }

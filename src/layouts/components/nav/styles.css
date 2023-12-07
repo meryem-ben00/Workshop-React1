@@ -1,17 +1,19 @@
-.navbar {
+.navbar  {
   background: var(--green-color);
   padding-top: 10px;
 }
 
-.active {
+.navbar .active {
   background: var(--bg-color);
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
   position: relative;
 }
 
-.active::before,
-.active::after {
+/* Change here, Make the classes more scoped first. */
+
+.navbar .active::before,
+.navbar .active::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -20,18 +22,18 @@
   background: transparent;
 }
 
-.active::before {
+.navbar .active::before {
   left: -20px;
   border-bottom-right-radius: 20px;
   box-shadow: 5px 5px 0 5px #1e2e5c;
 }
 
-.active::after {
+.navbar .active::after {
   right: -20px;
   border-bottom-left-radius: 20px;
   box-shadow: -5px 5px 0 5px #1e2e5c;
 }
 
-.navItem{
+.navItem {
   height: 50px;
 }
