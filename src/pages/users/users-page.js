@@ -15,7 +15,6 @@ export default function UsersPage() {
 
   useEffect(() => {
 
-    console.log('Data', type);
     if (type === 'doctors') {
       setTableData(doctorsMockData);
     } else if (type === 'administrations') {
