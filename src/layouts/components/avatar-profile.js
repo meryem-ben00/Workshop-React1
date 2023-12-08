@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { paths } from "../../routes/path";
+import { NavLink } from 'react-router-dom';
 
 export default function AvatarProfile() {
   return (
@@ -23,8 +24,10 @@ export default function AvatarProfile() {
 
       <div className="flex items-center justify-between">
         <div className="text-white">
-          <h6 className="text-sm"> Abdellah Saber</h6>
-          <span className="text-xs text-right block">Admin</span>
+          <NavLink to="settings/account-setting">
+            <h6 className="text-sm"> Abdellah Saber</h6>
+            <span className="text-xs text-right block">Admin</span>
+          </NavLink>
         </div>
 
         <img

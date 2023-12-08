@@ -26,16 +26,6 @@ export const dashboardRoutes = [
       },
 
       {
-        path: "users/:type",
-        element: <UsersPage />,
-      },
-
-      {
-        path: "chat",
-        element: <ChatPage />,
-      },
-
-      {
         path: "users/",
 
         children: [
@@ -43,26 +33,13 @@ export const dashboardRoutes = [
             path: "Profile",
             element: <DoctorProfile />,
           },
+          { path: "users/:type", element: <UsersPage /> },
         ],
       },
-    ],
-  },
 
-  {
-    path: "Patients",
-    element: (
-      <DashboardLayout>
-        <Outlet />
-      </DashboardLayout>
-    ),
-    children: [
       {
-        index: true,
-        element: <Patients />,
-      },
-      {
-        path: "Register",
-        element: <RegisterPatients />,
+        path: "chat",
+        element: <ChatPage />,
       },
 
       {
@@ -82,6 +59,38 @@ export const dashboardRoutes = [
             element: <EmailPage />,
           },
         ],
+      },
+    ],
+  },
+  {
+    path: "Patients",
+    element: (
+      <DashboardLayout>
+        <Outlet />
+      </DashboardLayout>
+    ),
+    children: [
+      {
+        index: true,
+        element: <Patients />,
+      },
+      {
+        path: "Register",
+        element: <RegisterPatients />,
+      },
+    ],
+  },
+  {
+    path: "Profile",
+    element: (
+      <DashboardLayout>
+        <Outlet />
+      </DashboardLayout>
+    ),
+    children: [
+      {
+        index: true,
+        element: <DoctorProfile />,
       },
     ],
   },

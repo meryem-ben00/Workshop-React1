@@ -11,8 +11,6 @@ export default function UsersPagePagination(props){
   // Highlight the current page. 
   const currentPageIndex = table.getState().pagination.pageIndex;
 
-  console.log(table.getPageCount()); //Number of existing pages
-
   const middlePagesActive = () => {
     if(currentPageIndex > 2 && currentPageIndex < table.getPageCount() - 1) 
       return true;

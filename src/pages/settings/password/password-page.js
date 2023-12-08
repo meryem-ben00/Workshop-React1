@@ -18,10 +18,7 @@ export default function PasswordPage(){
 
   const navigate = useNavigate();
 
-  console.log('string', errors);
-
   const onSubmit = (data) => {
-    console.log('data', data);
     // TODO: Save info in DB.
     navigate("/dashboard"); 
   }

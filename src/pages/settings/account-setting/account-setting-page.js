@@ -27,7 +27,6 @@ export default function AccountSettingPage(){
   const [inputImageFileList, setInputImageFileList] = useState("")
 
   const onSubmit = (data) => {
-    console.log('data', data);
     data.image = inputImageFileList;
     // TODO: Save info in DB.
     navigate("/dashboard"); 
