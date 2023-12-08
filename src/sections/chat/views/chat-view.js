@@ -16,10 +16,14 @@ export default function ChatView() {
   return (
     <>
       <div className="container my-5">
-        <div className="grid grid-cols-3 gap-4">
-          {renderNav}
+        <div className="flex justify-between">
+          <h1 className="text-white text-2xl"> Chat</h1>
 
-          {renderMessages}
+          <div className="grid grid-cols-3 gap-4">
+            {renderNav}
+
+            {renderMessages}
+          </div>
         </div>
       </div>
     </>

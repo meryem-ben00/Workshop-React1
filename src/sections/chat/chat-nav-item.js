@@ -1,5 +1,5 @@
 export default function ChatNavItem({ contact }) {
-  const { fullName, message, status, image } = contact;
+  const { fullName, message, status, image, id } = contact;
 
   const renderLastMessage = (
     <div className="flex items-center justify-between">
@@ -52,7 +52,11 @@ export default function ChatNavItem({ contact }) {
 
   return (
     <>
-      <div className="bg-white rounded-md mt-5">
+      <div
+        className={["bg-white rounded-md mt-5 p-3", id === 0 && "shadow-md"].join(
+          " "
+        )}
+      >
         <div className="flex items-center justify-between">
           {renderAvatar}
 
