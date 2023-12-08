@@ -6,6 +6,9 @@ import EmailPage from "../../pages/settings/email/email-page";
 import PasswordPage from "../../pages/settings/password/password-page";
 import SettingsPage from "../../pages/settings/settings-page";
 import UsersPage from "../../pages/users/users-page";
+import Patients from "../../pages/Patients/Patients"
+import RegisterPatients from "../../pages/Patients/RegisterPatients"
+import DoctorProfile from "../../pages/users/DoctorProfile"
 
 export const dashboardRoutes = [
   {
@@ -23,7 +26,7 @@ export const dashboardRoutes = [
 
       {
         path: "users/:type",
-        element: <UsersPage />,
+        element: <UsersPage />
       },
 
       {
@@ -47,4 +50,38 @@ export const dashboardRoutes = [
 
     ],
   },
+  {
+    path: "Patients",
+    element: (
+      <DashboardLayout>
+        <Outlet />
+      </DashboardLayout>
+    ),
+    children: [
+      {
+        index: true,
+        element: <Patients/>,
+      },
+      {
+        path: "Register",
+        element:<RegisterPatients/>,
+      }
+
+    ],
+  },
+  {
+    path: "Profile",
+    element: (
+      <DashboardLayout>
+        <Outlet />
+      </DashboardLayout>
+    ),
+    children: [
+      {
+        index: true,
+        element: <DoctorProfile/>,
+      }
+
+    ],
+  }
 ];
