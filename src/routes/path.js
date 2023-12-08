@@ -11,6 +11,10 @@ export const paths = {
     chat: `${ROOTS.DASHOARD}/chat`,
 
     test: `${ROOTS.DASHOARD}/test`,
+
+    profile: `${ROOTS.DASHOARD}/profile`,
+
+    patients: `${ROOTS.DASHOARD}/patients`
   },
 
   auth: {

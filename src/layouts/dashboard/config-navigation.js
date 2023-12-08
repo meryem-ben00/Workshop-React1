@@ -16,6 +16,12 @@ export const useNavData = () => {
         },
 
         {
+          title: "Patients",
+          path: paths.dashboard.patients,
+        },
+
+        
+        {
           title: "Test",
           path: paths.dashboard.test,
         },

@@ -60,38 +60,21 @@ export const dashboardRoutes = [
           },
         ],
       },
-    ],
-  },
-  {
-    path: "Patients",
-    element: (
-      <DashboardLayout>
-        <Outlet />
-      </DashboardLayout>
-    ),
-    children: [
+
       {
-        index: true,
-        element: <Patients />,
+        path: "Patients",
+        children: [
+          {
+            index: true,
+            element: <Patients />,
+          },
+          {
+            path: "Register",
+            element: <RegisterPatients />,
+          },
+        ],
       },
-      {
-        path: "Register",
-        element: <RegisterPatients />,
-      },
-    ],
-  },
-  {
-    path: "Profile",
-    element: (
-      <DashboardLayout>
-        <Outlet />
-      </DashboardLayout>
-    ),
-    children: [
-      {
-        index: true,
-        element: <DoctorProfile />,
-      },
+
     ],
   },
 ];
