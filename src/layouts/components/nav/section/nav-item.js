@@ -1,10 +1,14 @@
-import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import { Link, useParams } from "react-router-dom";
 
 export default function NavItem({ item, active }) {
+  const { type } = useParams();
   const { title, path } = item;
 
-  const activeClass = active ? "active" : "";
+  const isRouteActive = () => {
+    if(title == "Users" && type == "administrations" || active) return "active";
+    return "";
+  }
 
   return (
     <>
@@ -12,7 +16,7 @@ export default function NavItem({ item, active }) {
         to={path}
         className={[
           " text-white  px-3 py-2 text-sm font-medium flex justify-center items-center navItem",
-          activeClass,
+          isRouteActive()
         ].join(" ")}
         aria-current="page"
       >

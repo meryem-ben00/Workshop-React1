@@ -1,15 +1,15 @@
 import { Outlet } from "react-router-dom";
 import DashboardLayout from "../../layouts/dashboard/layout";
-import DashboardPage from "../../pages/dashboard";
 import Patients from "../../pages/Patients/Patients";
 import RegisterPatients from "../../pages/Patients/RegisterPatients";
-import DoctorProfile from "../../pages/users/DoctorProfile";
+import ChatPage from "../../pages/chat";
+import DashboardPage from "../../pages/dashboard";
 import AccountSettingPage from "../../pages/settings/account-setting/account-setting-page";
 import EmailPage from "../../pages/settings/email/email-page";
 import PasswordPage from "../../pages/settings/password/password-page";
 import SettingsPage from "../../pages/settings/settings-page";
+import DoctorProfile from "../../pages/users/DoctorProfile";
 import UsersPage from "../../pages/users/users-page";
-import ChatPage from "../../pages/chat";
 
 export const dashboardRoutes = [
   {
@@ -26,14 +26,14 @@ export const dashboardRoutes = [
       },
 
       {
-        path: "users/",
+        path: "users/*",
 
         children: [
           {
             path: "Profile",
             element: <DoctorProfile />,
           },
-          { path: "users/:type", element: <UsersPage /> },
+          { path: ":type", element: <UsersPage /> },
         ],
       },
 
