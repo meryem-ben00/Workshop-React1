@@ -8,6 +8,8 @@ import AccountSettingPage from "../../pages/settings/account-setting/account-set
 import EmailPage from "../../pages/settings/email/email-page";
 import PasswordPage from "../../pages/settings/password/password-page";
 import SettingsPage from "../../pages/settings/settings-page";
+import AdhdPage from "../../pages/test/adhd/adhd-page";
+import TestPage from "../../pages/test/test-page";
 import DoctorProfile from "../../pages/users/DoctorProfile";
 import UsersPage from "../../pages/users/users-page";
 
@@ -75,6 +77,37 @@ export const dashboardRoutes = [
         ],
       },
 
+      {
+        path: "test",
+        element: <TestPage />,
+        children: [
+          {
+            path: "ADHD",
+            element: <AdhdPage />,
+          },
+        ],
+      },
+
     ],
   },
 ];
+/* 
+  {
+    path: "settings",
+    element: <SettingsPage />,
+    children: [
+      {
+        path: "account-setting",
+        element: <AccountSettingPage />,
+      },
+      {
+        path: "password",
+        element: <PasswordPage />,
+      },
+      {
+        path: "email",
+        element: <EmailPage />,
+      },
+    ],
+  },
+*/

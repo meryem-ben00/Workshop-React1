@@ -15,7 +15,7 @@ export default function NavItem({ item, active }) {
       <Link
         to={path}
         className={[
-          " text-white  px-3 py-2 text-sm font-medium flex justify-center items-center navItem",
+          "navBarItem text-white px-3 py-2 text-sm font-medium flex justify-center items-center",
           isRouteActive()
         ].join(" ")}
         aria-current="page"

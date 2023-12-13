@@ -1,5 +1,5 @@
-import addUserIcon from "src/assets/icons/addUserIcon.svg";
 import './users-page.css';
+import addUserIcon from "/src/assets/icons/addUserIcon.svg";
 
 export default function UsersPageHeader({ itemsNumber, userType }){
 

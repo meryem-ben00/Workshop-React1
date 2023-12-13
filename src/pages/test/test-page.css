@@ -1,0 +1,33 @@
+.testPageLinksCom::before{
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background-color: #E0E4EC;
+  border-radius: 2px;
+  left: 0;
+  bottom: -2px;
+}
+
+.testPageLink.active{
+  color: var(--green-color);
+}
+
+.testPageLink::before{
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  border-radius: 2px;
+  left: 0;
+  bottom: -6px;
+  transition: .5s;
+}
+
+.testPageLink.active::before{
+  background-color: var(--green-color);
+}
+
+.testCom textarea{
+  outline: none;
+}

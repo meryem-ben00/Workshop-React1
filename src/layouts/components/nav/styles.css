@@ -12,8 +12,8 @@
 
 /* TODO IMPORTANT: Change here, Make the classes more scoped first.  */
 
-.navbar .active::before,
-.navbar .active::after {
+.navbar .active.navBarItem::before,
+.navbar .active.navBarItem::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -22,19 +22,19 @@
   background: transparent;
 }
 
-.navbar .active::before {
+.navbar .active.navBarItem::before {
   left: -20px;
   border-bottom-right-radius: 20px;
   box-shadow: 5px 5px 0 5px #1e2e5c;
 }
 
-.navbar .active::after {
+.navbar .active.navBarItem::after {
   right: -20px;
   border-bottom-left-radius: 20px;
   box-shadow: -5px 5px 0 5px #1e2e5c;
 }
 
 
-.navItem {
+.navBarItem {
   height: 50px;
 }

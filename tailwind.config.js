@@ -5,6 +5,7 @@ export default {
     extend: {
       colors: {
         'root-green': '#2e8544',
+        'bg-color': '#1e2e5c',
       }
     },
   },

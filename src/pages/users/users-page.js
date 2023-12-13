@@ -1,12 +1,12 @@
 import { getCoreRowModel, getPaginationRowModel, useReactTable } from "@tanstack/react-table";
 import { useEffect, useState } from "react";
 import { NavLink, useParams } from 'react-router-dom';
-import administrationsMockData from "src/assets/mock-data/administrations-mock-data.json";
-import doctorsMockData from "src/assets/mock-data/doctors-mock-data.json";
 import UsersPageHeader from "./users-page-header";
 import UsersPagePagination from "./users-page-pagination";
 import UsersPageTable from "./users-page-table";
 import './users-page.css';
+import administrationsMockData from "/src/assets/mock-data/administrations-mock-data.json";
+import doctorsMockData from "/src/assets/mock-data/doctors-mock-data.json";
 
 export default function UsersPage() {
   const [tableData, setTableData] = useState([]);

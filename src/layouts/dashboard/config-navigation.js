@@ -23,7 +23,7 @@ export const useNavData = () => {
         
         {
           title: "Test",
-          path: paths.dashboard.test,
+          path: `${paths.dashboard.test}/ADHD`,
         },
       ],
     },
