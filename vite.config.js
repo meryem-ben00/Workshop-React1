@@ -1,7 +1,7 @@
-import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import fs from "fs/promises";
 import path from "path";
+import { defineConfig } from "vite";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -15,6 +15,10 @@ export default defineConfig({
       {
         find: /^src(.+)/,
         replacement: path.join(process.cwd(), "src/$1"),
+      },
+      {
+        find: './runtimeConfig',
+        replacement: './runtimeConfig.browser', // ensures browser compatible version of AWS JS SDK is used
       },
     ],
   },

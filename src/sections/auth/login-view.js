@@ -1,7 +1,43 @@
+import { AuthenticationDetails, CognitoUser } from "amazon-cognito-identity-js";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import UserPool from "./pooldata";
 import "./style.css";
 
 export default function LoginView() {
+  const navigate = useNavigate();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
+  const user = new CognitoUser({
+    Username: email,
+    Pool: UserPool
+  })
+
+  const authDetails = new AuthenticationDetails({
+    Username: email,
+    Password: password
+  })
+
+  const onSubmit = (event) => {
+    event.preventDefault();
+
+    /* 
+      !SignUp Code:
+        UserPool.signUp(email, password, [], null, (err, data) => {
+          if(err) return window.alert(err.message);
+          window.alert("You signed up successfully :), Verify you email sir.");
+        })
+    */
+
+    /* 
+      !SignIn Code:*/
+        user.authenticateUser(authDetails, {
+          onSuccess: (data) => navigate("/dashboard"),
+          onFailure: (err) => window.alert(err.message),
+        })
+    
+  }
   
   const renderHeader = (
     <>
@@ -24,11 +60,16 @@ export default function LoginView() {
       </label>
       <div className="mt-2">
         <input
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
           type="text"
           name="email_username"
           id="email_username"
           autoComplete="email_username"
-          className="block w-full rounded-md border-0 py-1.5 bg-gray-300 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 p-2 sm:text-sm sm:leading-6"
+          className="
+            block w-full rounded-md border-0 py-1.5 bg-gray-300 text-gray-900 
+            shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400
+            p-2 sm:text-sm sm:leading-6"
         />
       </div>
     </div>
@@ -44,6 +85,8 @@ export default function LoginView() {
       </label>
       <div className="mt-2">
         <input
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
           type="text"
           name="password"
           id="password"
@@ -75,7 +118,10 @@ export default function LoginView() {
   );
 
   return (
-    <form className="flex items-center justify-center form-h">
+    <form 
+      className="flex items-center justify-center form-h"
+      onSubmit={onSubmit}
+    >
       <div className="login-form flex items-center justify-center rounded-md bg-white h-auto ">
         <div className=" py-8 px-4 h-auto ">
 
@@ -105,7 +151,9 @@ export default function LoginView() {
 
             <button
               type="submit"
-              className="bg-green-700 hover:bg-green-500 mt-3  text-white text-xs py-2 px-4 rounded submit-btn"
+              className="
+                bg-green-700 hover:bg-green-500 mt-3  text-white text-xs 
+                py-2 px-4 rounded submit-btn"
             >
               Sign In
             </button>
